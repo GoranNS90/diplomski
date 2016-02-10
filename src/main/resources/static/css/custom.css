@@ -1,0 +1,44 @@
+.navbar {
+	margin-bottom: 0px;
+}
+
+.sidebar-active-item {
+	text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-collapse {
+    position: absolute !important;
+    left: 0px !important;
+    right: 0 !important;
+    
+    -moz-transition: left 0.5s ease !important;
+    transition: left 0.5s ease !important;
+}
+
+.ng-view-container {
+	padding-bottom: 100px;
+	padding-top: 50px;
+}
+
+.remove-item {
+	color: #ff8080;
+}
+
+.remove-item:hover {
+	color: #ff0000;
+	cursor: pointer;
+}
+
+.sidebar-arrow:hover {
+	cursor: pointer;
+}
+
+.success-notification {
+	position: absolute;
+	background-color: #33FF00;
+	z-index: 10000;
+	width: 100%;
+	
+}

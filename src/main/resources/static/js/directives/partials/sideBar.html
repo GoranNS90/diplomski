@@ -1,0 +1,9 @@
+<div id="sidebar-wrapper" ng-class="{'sidebar-collapse' : collapse == true}">
+	<ul class="sidebar-nav" role="tablist">
+		<li ng-class="{'sidebar-active-item' : activeTab == 'home'}"><a href="#/"><span class="glyphicon glyphicon-home"></span> home</a></li>
+		<li ng-if="!authenticated" ng-class="{'sidebar-active-item' : activeTab == 'login'}" ><a href="#/login"><span class="glyphicon glyphicon-log-in"></span> login</a></li>
+		<li ng-if="authenticated"><a href="" ng-click="logout()"><span class="glyphicon glyphicon-log-out"></span> logout</a></li>
+		<li ng-class="{'sidebar-active-item' : activeTab == 'register'}"><a ng-href="#/register"><span class="glyphicon glyphicon-registration-mark"></span> register</a></li>
+		<li ng-class="{'sidebar-active-item' : activeTab == 'addPost'}" ng-if="authenticated"><a ng-href="#/addPost"><span class="glyphicon glyphicon-pencil"></span> add post</a></li>
+	</ul>
+</div>

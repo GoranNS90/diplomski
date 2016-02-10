@@ -1,0 +1,21 @@
+<div ng-if="showPosts" ng-repeat="post in posts">
+	<div class="row panel panel-default">
+		<div class="col-md-6 bg-success">
+			<b><span ng-bind="post.username">username</span></b>
+		</div>
+		<div class="col-md-6 bg-success">
+			<span ng-bind="post.date" class="pull-right">date</span>
+		</div>
+		<div class="col-md-12">
+			<a ng-href="#/" ng-click="showSelectedPostDetails(post)">
+				<span ng-bind="post.title" class="panel-heading">
+				content
+				</span>
+			</a>
+		</div>
+		<div class="pull-right">
+			<h3><span ng-if="role == 'ROLE_ADMIN'" ng-click="removePost(post.id)" class="glyphicon glyphicon-remove remove-item"></span></h3>
+		</div>
+	</div>
+	<hr class="navbar-inverse">
+</div>

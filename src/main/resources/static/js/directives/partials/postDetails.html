@@ -1,0 +1,33 @@
+<div ng-if="!showPosts">
+	<div class="row panel panel-default">
+		<div class="col-md-6 bg-success">
+			<b><span ng-bind="selectedPost.username">username</span></b>
+		</div>
+		<div class="col-md-6 bg-success">
+			<span ng-bind="selectedPost.date" class="pull-right">date</span>
+		</div>
+		<div class="col-md-12">
+			<span ng-bind="selectedPost.content" class="panel-heading">
+			content
+			</span>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-11 col-md-offset-1" ng-repeat="addedComment in selectedPost.comments">
+			<b><span ng-bind="addedComment.username"></span></b>
+			<span ng-bind="addedComment.content"></span>
+			<div class="pull-right">
+				<h3><span ng-if="role == 'ROLE_ADMIN'" ng-click="removeComment(addedComment.id)" class="glyphicon glyphicon-remove remove-item"></span></h3>
+			</div>
+			<hr class="navbar-inverse">
+		</div>
+	</div>
+	<div ng-if="authenticated">
+		<div class="form-group">
+			<label for="comment">Add comment:</label>
+		  	<textarea class="form-control" rows="3" id="comment" ng-model="comment.content"></textarea>
+		</div>
+	</div>
+	<div class="btn btn-primary pull-left" ng-click="getAllPosts()">Back</div>
+	<div ng-if="authenticated" class="btn btn-primary pull-right" ng-click="addComment()">Add comment</div>
+</div>

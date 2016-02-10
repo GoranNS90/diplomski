@@ -1,0 +1,19 @@
+<nav class="navbar navbar-inverse navbar-static-top">
+	<div class="container">
+		<div class="navbar-brand">
+			<span class="">Blog</span>
+		</div>
+		<div class="navbar-brand">
+			<span class="glyphicon sidebar-arrow" ng-click="collapseFunction()" ng-class="{'glyphicon-chevron-left' : collapse == true, 'glyphicon-chevron-right' : collapse == false}"></span>
+		</div>
+		<div>
+			<ul class="nav navbar-nav pull-right" role="tablist">
+				<li ng-class="{'active' : activeTab == 'home'}"><a href="#/">home</a></li>
+				<li ng-if="!authenticated" ng-class="{'active' : activeTab == 'login'}" ><a href="#/login">login</a></li>
+				<li ng-if="authenticated"><a href="" ng-click="logout()">logout</a></li>
+				<li ng-class="{'active' : activeTab == 'register'}"><a ng-href="#/register">register</a></li>
+				<li ng-class="{'active' : activeTab == 'addPost'}" ng-if="authenticated"><a ng-href="#/addPost">add post</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>

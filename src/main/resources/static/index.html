@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<title>Blog</title>
+<!-- <link href="css/angular-bootstrap.css" rel="stylesheet"> -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="http://bootswatch.com/flatly/bootstrap.min.css"> -->
+<link href="css/sidebar.css" rel="stylesheet">
+<link href="css/custom.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<style type="text/css">
+[ng\:cloak], [ng-cloak], .ng-cloak {
+	display: none !important;
+}
+</style>
+</head>
+
+<body ng-app="blog" ng-cloak class="ng-cloak">
+
+	<header-directive></header-directive>
+	
+	<sidebar-directive></sidebar-directive>
+	
+	<div ng-view class="container ng-view-container"></div>
+	
+	<footer-directive></footer-directive>
+	
+	<script src="js/angular-bootstrap.js" type="text/javascript"></script>
+	<script src="js/directives/blog-directives.js" type="text/javascript"></script>
+	<script src="js/services/blog-services.js" type="text/javascript"></script>
+	<script src="js/controllers/blog-controllers.js" type="text/javascript"></script>
+	<script src="js/blog.js" type="text/javascript"></script>
+</body>
+</html>

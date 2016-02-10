@@ -1,0 +1,26 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<span>Add post</span>
+				</div>
+				<div class="panel-body">
+					<form role="form" ng-submit="addPost()">
+						<div class="form-group">
+							<label for="username">Title:</label> <input type="text"
+								class="form-control" id="title" name="title" ng-model="post.title"/>
+						</div>
+						<div class="form-group">
+							<label for="comment">Post:</label>
+							<textarea class="form-control" rows="5" id="content" ng-model="post.content"></textarea>
+						</div>
+						<div class="form-group text-center">
+							<button type="submit" class="btn btn-primary">Add</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,34 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<span>Register</span>
+				</div>
+				<div class="panel-body">
+					<form role="form" ng-submit="register()">
+						<div class="form-group">
+							<label for="username">Username:</label> <input type="text"
+								class="form-control" id="username" name="username" ng-model="user.username"/>
+						</div>
+						<div class="form-group">
+							<label for="password">Password:</label> <input type="password"
+								class="form-control" id="password" name="password" ng-model="user.password"/>
+						</div>
+						<div class="alert alert-danger" ng-if="notEqual">
+							Retype password is not same as password!!!
+						</div>
+						<div class="form-group">
+							<label for="retypePassword">Retype password:</label> <input type="password"
+								class="form-control" id="retypePassword" name="retypePassword" ng-model="user.retypePassword"/>
+						</div>
+						<div class="form-group text-center">
+							<button type="submit" class="btn btn-primary">Register</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div ng-if="notification" class="footer navbar navbar-default navbar-fixed-bottom success-notification text-center"><h1>You have successfully registered on Blog</h1></div>
